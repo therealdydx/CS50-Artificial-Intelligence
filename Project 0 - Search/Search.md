@@ -128,9 +128,25 @@ For the frontier, we would require the use of a stack as the data structure. (La
 - Utilizes a stack (Last in, first out)
 - Keep going down a specific branch
 
+In a more comprehensive explanation:
+A depth-first search algorithm exhausts one direction before trying another direction. In such cases, the frontier is managed as a stack data structure. After nodes are being added to the frontier, the first node to remove and consider is the last one to be added. 
+
+Pros:
+- Possible luck that it may be the fastest as it may luck out and chooses the right path to the solution.
+
+Cons:
+- The found solution is not optimal
+- At worst, the algorithm will explore every possible path before finding the solution
+
 2. Breadth First Search
 
 - Search algorithm that always expands the shallowest node in the frontier
 - Utilizes queue (First in, first out -> The earlier you are put in, the earlier you get explored) 
 - 1 state away, 2 state away, 3 state away, until hits a solution
 
+Pros:
+- This algorithm is guaranteed to find the optimal solution
+
+Cons:
+- This algorithm is almost guaranteed to take longer than the minimal time to run
+- At worst, this algorithm takes the longest possible time to run
