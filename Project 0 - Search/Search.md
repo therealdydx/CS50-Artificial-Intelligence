@@ -130,7 +130,7 @@ Given the information, here is a revised approach.
 
 For the frontier, we would require the use of a stack as the data structure. (Last in, first out data type)
 
-### Search Algorithms
+## Search Algorithms
 
 1. Depth First Search
 
