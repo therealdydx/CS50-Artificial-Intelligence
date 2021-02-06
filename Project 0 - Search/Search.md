@@ -83,6 +83,17 @@ We use a node in our search problems:
 - An action (action applied to parent to get node)
 - A path cost (from initial state to node)
 
+```
+# define a class called Node, this class has three variables
+class Node():
+  
+   def __init__(self, state, parent, action):
+      self.state = state
+      self.parent = parent
+      self.action = action
+    
+```
+
 ### Approach
 
 From a given state, we have multiple options. We need to explore these options. We need to store all these nodes.
@@ -138,6 +149,37 @@ Cons:
 - The found solution is not optimal
 - At worst, the algorithm will explore every possible path before finding the solution
 
+```
+# define a class called StackFrontier, representing the frontier in a depth first approach
+class StackFrontier():
+  
+    # create a frontier that is empty, create empty list
+    def __init__(self):
+        self.frontier = []
+    
+    # stack the node onto the stack
+    def add(self, node):
+        self.frontier.append(node)
+        
+    # check if the frontier contains a particular state
+    def contains_state(self, state):
+        return any(node.state == state for node in self.frontier)
+    
+    # check if the frontier is empty, 0 length means no solutions
+    def empty(self):
+        return len(self.frontier) == 0
+        
+    # if frontier isn't empty, then we should remove the last node in the frontier for checking, and return node
+    def remove(self):
+        if self.empty():
+            raise Exception("empty frontier")
+            
+        else:
+            node = self.frontier[-1]
+            self.frontier = self.frontier[:-1]
+            return node
+```
+
 2. Breadth First Search
 
 - Search algorithm that always expands the shallowest node in the frontier
@@ -150,3 +192,18 @@ Pros:
 Cons:
 - This algorithm is almost guaranteed to take longer than the minimal time to run
 - At worst, this algorithm takes the longest possible time to run
+
+```
+# define a class called QueueFrontier, representing the frontier in a breadth first approach
+class QueueFrontier(StackFrontier):
+
+    # if frontier isn't empty, then we should remove the first node in the frontier for checking, and return node
+    def remove(self):
+        if self.empty():
+            raise Exception("empty frontier")
+            
+        else:
+            node = self.frontier[0]
+            self.frontier = self.frontier[1:]
+            return node
+```
