@@ -51,11 +51,26 @@ It is usually described in a graph of nodes with directions between each node (s
 
 #### Goal Test
 
+Way to determine whether a given state is a goal state. 
 
+i.e. In a navigator app, the goal test would be whether the current location of the agent is at the destination. 
 
 #### Path Cost
 
+Numerical cost associated with a given path. We formulate the cost of each solution, and how costly it would be. We would want to find the path with the least path cost (save time, save money, save power, etc)
 
+i.e. A navigator app does not bring you to your goal, and make detours. 
 
-### Solving Search Problems
+### Search Problems
+
+Consider:
+- Initial State
+- Actions
+- Transition Model
+- Goal Test
+- Path Cost
+
+#### Solution
+
+A solution that has the lowest path cost among all solutions, considering the initial state, actions, goal test, etc. 
 
