@@ -210,21 +210,21 @@ class QueueFrontier(StackFrontier):
 
 ### Search Strategies
 
-1. Uninformed Search
+#### Uninformed Search
 
 Search strategy that uses no problem-specific knowledge.
 
-2. Informed Search
+#### Informed Search
 
 Search strategy that uses problem-specific knowledge to find solutions more efficiently. 
 
 Within Informed Search patterns, there are a couple of search algorithms. 
 
-- Greedy Best-First Search
+1. Greedy Best-First Search
 
 Search algorithm that expands the node that is closest to the goal, as estimated by a heuristic function h(n) (i.e. Manhattan Distance)
 
-- A* Search
+2. A* Search
 
 Search algorithm that expands node with lowest value of g(n) + h(n)
 
@@ -235,28 +235,28 @@ Conditions:
 - h(n) is admissible (never overestimates the true cost)
 - h(n) is consistent (for every node n and successor n' with step cost c)
 
-3. Adverserial Search
+#### Adverserial Search
 
-- Minimax
+1. Minimax
 
 i.e. Tic Tac Toe
 
 Max(M) wants to maximum score
 Min(O) wants to minimize score
 
-S: Initial State
-Player(s): Returns which player to move in state S
-Action(s): Returns legal moves in state s
-Result(s,a): Returns state after action a taken in state s
-Terminal(s): Checks if state s is a terminal state
-Utility(s): Fnial numerical value for terminal state s
+- S: Initial State
+- Player(s): Returns which player to move in state S
+- Action(s): Returns legal moves in state s
+- Result(s,a): Returns state after action a taken in state s
+- Terminal(s): Checks if state s is a terminal state
+- Utility(s): Fnial numerical value for terminal state s
 
-Intiial State: Board without playing yet
-Player(s): X and O
-Action(s): Options available
-Result(s, a): Next state
-Terminal(s): False or True
-Utility(s): 1 or -1 or 0
+- Intiial State: Board without playing yet
+- Player(s): X and O
+- Action(s): Options available
+- Result(s, a): Next state
+- Terminal(s): False or True
+- Utility(s): 1 or -1 or 0
 
 Pseudocode:
 
@@ -280,3 +280,7 @@ function Min-Value(state):
   return v
 ```
 We are using recursive.
+
+2. Alpha Beta Pruning
+
+Pruning a tree, Alpha = Best you can, Beta = Worst you can do, Pruning is not having to search through the entire result, just look for best and worst.
