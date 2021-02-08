@@ -244,19 +244,12 @@ i.e. Tic Tac Toe
 Max(M) wants to maximum score
 Min(O) wants to minimize score
 
-- S: Initial State
-- Player(s): Returns which player to move in state S
-- Action(s): Returns legal moves in state s
-- Result(s,a): Returns state after action a taken in state s
-- Terminal(s): Checks if state s is a terminal state
-- Utility(s): Fnial numerical value for terminal state s
-
-- Intiial State: Board without playing yet
-- Player(s): X and O
-- Action(s): Options available
-- Result(s, a): Next state
-- Terminal(s): False or True
-- Utility(s): 1 or -1 or 0
+- S: Initial State i.e. Board without playing yet
+- Player(s): Returns which player to move in state S i.e. X and O
+- Action(s): Returns legal moves in state s i.e. Options available
+- Result(s,a): Returns state after action a taken in state s i.e. Next state
+- Terminal(s): Checks if state s is a terminal state i.e. False or True
+- Utility(s): Fnial numerical value for terminal state s i.e. 1 or -1 or 0
 
 Pseudocode:
 
@@ -284,3 +277,11 @@ We are using recursive.
 2. Alpha Beta Pruning
 
 Pruning a tree, Alpha = Best you can, Beta = Worst you can do, Pruning is not having to search through the entire result, just look for best and worst.
+
+3. Depth-Limited Minimax
+
+After a certain amount of moves, will stop calculating other possible options, because it becomes computationally impossible to calculate. 
+
+Requires evaluation function:
+
+Estimates the expected utility of the game from a given state. (i.e. how many pieces you have compared to your opponent in chess)
