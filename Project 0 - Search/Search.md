@@ -260,6 +260,7 @@ Utility(s): 1 or -1 or 0
 
 Pseudocode:
 
+```
 function Max-Value(state):
   if Terminal(state):
     return Utility(State)
@@ -277,5 +278,5 @@ function Min-Value(state):
   for action in Actions(state):
     v = Min(v, Max-Value(Result(state, action)))
   return v
-  
+```
 We are using recursive.
