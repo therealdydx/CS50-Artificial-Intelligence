@@ -8,7 +8,7 @@ Problem Sets for HarvardX's [CS50 Introduction to Artificial Intelligence with P
 
 | Week | Topic            | Name                       | Description                                                        | How to Run                                                            |
 | :--- | :--------------- | :------------------------- | :----------------------------------------------------------------- | :-------------------------------------------------------------------- |
-| 0    | Search           | [Degrees](PSET0 - Degrees)         | Determine how many degrees of separation apart two actors are      | `$ python degrees.py large`                                           |
+| 0    | Search           | [Degrees](https://github.com/therealdydx/CS50-Artificial-Intelligence/tree/main/PSET0%20-%20Degrees/degrees) | Determine how many degrees of separation apart two actors are      | `$ python degrees.py large`                                           |
 | 0    | Search           | [Tic-Tac-Toe](PSET0 - Tic-Tac-Toe) | Play tic-tac-toe optimally using Minimax                           | `$ python runner.py`                                                  |
 | 1    | Knowledge        | [Knights](knights)         | Solve logic puzzles                                                | `$ python puzzle.py`                                                  |
 | 1    | Knowledge        | [Minesweeper](minesweeper) | Play Minesweeper                                                   | `$ python runner.py`                                                  |
